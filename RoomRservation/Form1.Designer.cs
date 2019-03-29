@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNavigator = new System.Windows.Forms.Panel();
             this.btnBooking = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -308,8 +308,8 @@
             // 
             this.dgvAvailability.AllowUserToAddRows = false;
             this.dgvAvailability.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgvAvailability.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvAvailability.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAvailability.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAvailability.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvAvailability.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -578,9 +578,9 @@
             this.lblTotal1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblTotal1.Location = new System.Drawing.Point(168, 156);
             this.lblTotal1.Name = "lblTotal1";
-            this.lblTotal1.Size = new System.Drawing.Size(97, 23);
+            this.lblTotal1.Size = new System.Drawing.Size(21, 23);
             this.lblTotal1.TabIndex = 36;
-            this.lblTotal1.Text = "nkjnkjnkj";
+            this.lblTotal1.Text = "0";
             // 
             // lblTotal
             // 
@@ -600,9 +600,9 @@
             this.lblPrice1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblPrice1.Location = new System.Drawing.Point(168, 53);
             this.lblPrice1.Name = "lblPrice1";
-            this.lblPrice1.Size = new System.Drawing.Size(97, 23);
+            this.lblPrice1.Size = new System.Drawing.Size(21, 23);
             this.lblPrice1.TabIndex = 34;
-            this.lblPrice1.Text = "nkjnkjnkj";
+            this.lblPrice1.Text = "0";
             // 
             // btnTotal
             // 
@@ -708,6 +708,7 @@
             this.btnDelete.TabIndex = 24;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblRoom
             // 

@@ -72,5 +72,19 @@ namespace RoomRservation
                 return false;
             }
         }
+
+        public bool delete(String query)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }

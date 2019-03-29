@@ -420,6 +420,16 @@ namespace RoomRservation
                 return dt;
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            ContactClass c = new ContactClass();
+            c.ContactID = Int32.Parse(txtboxContactID.Text);
+           
+            c.deleteCustomer();
+            clearAddCustomerForm();
+            dgvAllCustomers.DataSource = loadAllCustomers();
+        }
     }
        
 }

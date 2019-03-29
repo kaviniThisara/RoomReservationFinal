@@ -68,7 +68,7 @@ namespace RoomRservation
 
         }
 
-        internal void UpdateCustomer()
+        public void UpdateCustomer()
         {
             String q = "update Customers set FirstName ='" + FirstName + "',LastName = '" + LastName + "' ,ContactNumber = '" + ContactNo + "' ,Address = '" + Address + "' ,Gender = '" + Gender + "',DateOfBirth = '" + this.DateOfBirth + "',RoomType = '" + RoomType + "',Rooms = '" + Room + "' Where ContactID = '" + ContactID + "'";
 
@@ -128,6 +128,39 @@ namespace RoomRservation
 
 }
 
+
+        }
+
+        public void deleteCustomer()
+         {
+
+
+            String q = "delete from Customers Where ContactID = '" + ContactID + "'";
+
+            try
+            {
+                using (DBConect db = new DBConect())
+                {
+
+                    bool ok = db.delete(q);
+
+                    if (ok)
+                    {
+                        MessageBox.Show("User Deleted successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("User deleted failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                   
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
 
         }
     }
