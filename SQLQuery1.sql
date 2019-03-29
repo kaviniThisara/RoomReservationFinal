@@ -1,0 +1,1 @@
+﻿insert into Customers(FirstName,LastName,ContactNumber,Address,Gender,DateOfBirth,RoomType,Rooms) values ('chalana','bjfEBIUG','48491984','wEUIGHIPhg','Male','3/7/2019','Deluxe Room','2')
