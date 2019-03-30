@@ -19,25 +19,15 @@ namespace RoomRservation
         public String Address { get; set; }
         public String Gender { get; set; }
         public String  DateOfBirth { get; set; }
+  
         public String RoomType { get; set; }
-        //  public String Room { get; set; }
-        public int Room { get; set; }         
 
+        public int Room { get; set; } 
+   
 
         public void InsertCustomer()
         {
-            //int ContactId = txtUn;
-            //String FirstName = txtFn;
-            //String LastName = txtLn;
-            //String ContactNo = txtCn;
-            //String Address = txtAd;
-            //String Gender = txtGn;
-            //String DateOfBirth = txtDob;
-            //String RoomType = txtRt;
-            //String Room = txtRo;
-
-
-            String q = "insert into Customers(FirstName,LastName,ContactNumber,Address,Gender,DateOfBirth,RoomType,Rooms) values ('" + FirstName + "','" + LastName + "','" + ContactNo + "','" + Address + "','" + Gender + "','" + this.DateOfBirth + "','" + RoomType + "','" + Room + "')";
+             String q = "insert into Customers(FirstName,LastName,ContactNumber,Address,Gender,DateOfBirth,RoomType,Rooms) values ('" + FirstName + "','" + LastName + "','" + ContactNo + "','" + Address + "','" + Gender + "','" + this.DateOfBirth + "','" + RoomType + "','" + Room + "')";
 
             try
             {
@@ -54,10 +44,7 @@ namespace RoomRservation
                         MessageBox.Show("User insertion failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    //SqlCommand cmd = new SqlCommand(q, db.con);
-                    //cmd.ExecuteNonQuery();
-                    //MessageBox.Show("User inserted successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //clearTexts();
+                   
                 }
             }
             catch (Exception e)
@@ -70,7 +57,7 @@ namespace RoomRservation
 
         public void UpdateCustomer()
         {
-            String q = "update Customers set FirstName ='" + FirstName + "',LastName = '" + LastName + "' ,ContactNumber = '" + ContactNo + "' ,Address = '" + Address + "' ,Gender = '" + Gender + "',DateOfBirth = '" + this.DateOfBirth + "',RoomType = '" + RoomType + "',Rooms = '" + Room + "' Where ContactID = '" + ContactID + "'";
+            String q = "update Customers set FirstName ='" + FirstName + "',LastName = '" + LastName + "' ,ContactNumber = '" + ContactNo + "' ,Address = '" + Address + "' ,Gender = '" + Gender + "',DateOfBirth = '" + this.DateOfBirth +  "',RoomType = '" + RoomType + "',Rooms = '" + Room + "' Where ContactID = '" + ContactID + "'";
 
             try
             {
@@ -88,10 +75,7 @@ namespace RoomRservation
                         MessageBox.Show("User updation failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                //    MySqlCommand cmd = new MySqlCommand(q, db.con);
-                //    cmd.ExecuteNonQuery();
-                //    MessageBox.Show("User updated successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 
+              
 
                 }
             }
@@ -118,9 +102,8 @@ namespace RoomRservation
                     this.Gender    = r[5].ToString();
                     this.DateOfBirth = r[6].ToString();
                     this.RoomType    = r[7].ToString();
-                    // this.Room        = r[8].ToString();
-                    this.Room   = Int32.Parse(r[8].ToString());
-
+                     this.Room        = Int32.Parse(r[8].ToString());
+                 
                 }
 
                 return this;
@@ -139,7 +122,8 @@ namespace RoomRservation
 
             try
             {
-                using (DBConect db = new DBConect())
+                using (
+                    DBConect db = new DBConect())
                 {
 
                     bool ok = db.delete(q);

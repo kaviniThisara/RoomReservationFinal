@@ -50,8 +50,8 @@ C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRserva
 C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\bin\Debug\hotel_log.ldf
 C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\bin\Debug\RoomRservation.exe
 C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\bin\Debug\RoomRservation.pdb
-C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\obj\Debug\RoomRservation.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\obj\Debug\RoomRservation.frmMain.resources
 C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\obj\Debug\RoomRservation.frmLogin.resources
 C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\obj\Debug\RoomRservation.Properties.Resources.resources
 C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\obj\Debug\RoomRservation.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\HotelReservation-master\HotelReservation-master\RoomRservation\obj\Debug\RoomRservation.csprojResolveAssemblyReference.cache
