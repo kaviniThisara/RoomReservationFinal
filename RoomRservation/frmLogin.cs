@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +17,17 @@ namespace RoomRservation
     {
         public frmLogin()
         {
+
+            Thread t = new Thread(new ThreadStart(startSplashScreen));
+            t.Start();
+            Thread.Sleep(2000);                           
             InitializeComponent();
+            t.Abort();
+        }
+
+        private void startSplashScreen()
+        {
+            Application.Run(new SplashScreen());
         }
 
         public object Sqlcommand { get; private set; }
@@ -64,9 +75,15 @@ namespace RoomRservation
             txtPw.Clear();
             txtUn.Clear();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            
 
             String userName = txtUn.Text;
             String password = txtPw.Text;
@@ -99,6 +116,19 @@ namespace RoomRservation
                 }
             }
 
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPw_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
         }
     }
 }

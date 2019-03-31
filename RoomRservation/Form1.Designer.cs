@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNavigator = new System.Windows.Forms.Panel();
             this.btnBooking = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -252,6 +252,7 @@
             // btnCheckForRoomType
             // 
             this.btnCheckForRoomType.BackColor = System.Drawing.Color.Green;
+            this.btnCheckForRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCheckForRoomType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckForRoomType.Location = new System.Drawing.Point(1236, 125);
             this.btnCheckForRoomType.Name = "btnCheckForRoomType";
@@ -278,8 +279,8 @@
             // 
             this.dgvAvailability.AllowUserToAddRows = false;
             this.dgvAvailability.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgvAvailability.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvAvailability.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvAvailability.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAvailability.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvAvailability.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -313,6 +314,8 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(116, 185);
             this.btnAdd.Name = "btnAdd";
@@ -324,6 +327,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Green;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(389, 185);
             this.button6.Name = "button6";
@@ -468,10 +472,11 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(788, 692);
+            this.btnClear.Location = new System.Drawing.Point(807, 692);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(196, 66);
+            this.btnClear.Size = new System.Drawing.Size(196, 56);
             this.btnClear.TabIndex = 33;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -480,11 +485,12 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(1431, 62);
+            this.btnSearch.Location = new System.Drawing.Point(1397, 50);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(115, 33);
+            this.btnSearch.Size = new System.Drawing.Size(115, 56);
             this.btnSearch.TabIndex = 26;
             this.btnSearch.Text = "Search ID";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -493,13 +499,15 @@
             // txtboxContactID
             // 
             this.txtboxContactID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxContactID.Location = new System.Drawing.Point(1095, 62);
+            this.txtboxContactID.Location = new System.Drawing.Point(1061, 64);
             this.txtboxContactID.Name = "txtboxContactID";
             this.txtboxContactID.Size = new System.Drawing.Size(320, 32);
             this.txtboxContactID.TabIndex = 9;
+            this.txtboxContactID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxContactID_KeyDown);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblDiscount);
             this.groupBox3.Controls.Add(this.chkDiscount);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.lblTotal1);
@@ -508,7 +516,6 @@
             this.groupBox3.Controls.Add(this.btnTotal);
             this.groupBox3.Controls.Add(this.txtDiscount);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.lblDiscount);
             this.groupBox3.Controls.Add(this.lblPrice);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox3.Location = new System.Drawing.Point(572, 63);
@@ -531,11 +538,12 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(21, 234);
+            this.button1.Location = new System.Drawing.Point(32, 234);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 66);
+            this.button1.Size = new System.Drawing.Size(145, 56);
             this.button1.TabIndex = 37;
             this.button1.Text = "Paid";
             this.button1.UseVisualStyleBackColor = false;
@@ -576,11 +584,12 @@
             // btnTotal
             // 
             this.btnTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnTotal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTotal.Location = new System.Drawing.Point(229, 234);
             this.btnTotal.Name = "btnTotal";
-            this.btnTotal.Size = new System.Drawing.Size(153, 66);
+            this.btnTotal.Size = new System.Drawing.Size(153, 56);
             this.btnTotal.TabIndex = 33;
             this.btnTotal.Text = "Total";
             this.btnTotal.UseVisualStyleBackColor = false;
@@ -632,8 +641,9 @@
             // btnViewAll
             // 
             this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewAll.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAll.Location = new System.Drawing.Point(1095, 552);
+            this.btnViewAll.Location = new System.Drawing.Point(1061, 692);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Size = new System.Drawing.Size(451, 56);
             this.btnViewAll.TabIndex = 29;
@@ -646,21 +656,27 @@
             this.dgvAllCustomers.AllowUserToAddRows = false;
             this.dgvAllCustomers.AllowUserToDeleteRows = false;
             this.dgvAllCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAllCustomers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.dgvAllCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllCustomers.Location = new System.Drawing.Point(1095, 129);
+            this.dgvAllCustomers.Location = new System.Drawing.Point(1061, 121);
+            this.dgvAllCustomers.MultiSelect = false;
             this.dgvAllCustomers.Name = "dgvAllCustomers";
             this.dgvAllCustomers.ReadOnly = true;
             this.dgvAllCustomers.RowTemplate.Height = 24;
-            this.dgvAllCustomers.Size = new System.Drawing.Size(451, 401);
+            this.dgvAllCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAllCustomers.Size = new System.Drawing.Size(451, 550);
             this.dgvAllCustomers.TabIndex = 1;
+            this.dgvAllCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllCustomers_CellContentClick);
+            this.dgvAllCustomers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvAllCustomers_MouseClick);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(294, 690);
+            this.btnUpdate.Location = new System.Drawing.Point(299, 690);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(196, 66);
+            this.btnUpdate.Size = new System.Drawing.Size(196, 56);
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -669,10 +685,11 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(544, 690);
+            this.btnDelete.Location = new System.Drawing.Point(553, 690);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(196, 66);
+            this.btnDelete.Size = new System.Drawing.Size(196, 56);
             this.btnDelete.TabIndex = 24;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -702,6 +719,7 @@
             this.cmbRoom.Name = "cmbRoom";
             this.cmbRoom.Size = new System.Drawing.Size(195, 31);
             this.cmbRoom.TabIndex = 22;
+            this.cmbRoom.SelectedIndexChanged += new System.EventHandler(this.cmbRoom_SelectedIndexChanged);
             // 
             // cmbRoomType
             // 
@@ -732,10 +750,11 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(45, 690);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(196, 66);
+            this.btnSubmit.Size = new System.Drawing.Size(196, 56);
             this.btnSubmit.TabIndex = 19;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -998,12 +1017,11 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.Black;
-            this.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlHeader.Controls.Add(this.lblHotelName);
             this.pnlHeader.Controls.Add(this.button2);
             this.pnlHeader.Controls.Add(this.btnLogout);
             this.pnlHeader.Controls.Add(this.btnProfile);
             this.pnlHeader.Controls.Add(this.lblSystemName);
-            this.pnlHeader.Controls.Add(this.lblHotelName);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(291, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -1015,7 +1033,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1225, 123);
+            this.button2.Location = new System.Drawing.Point(1253, 14);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 38);
             this.button2.TabIndex = 4;
@@ -1026,18 +1044,19 @@
             // 
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLogout.Font = new System.Drawing.Font("Palatino Linotype", 10.2F);
-            this.btnLogout.Location = new System.Drawing.Point(1454, 121);
+            this.btnLogout.Location = new System.Drawing.Point(1482, 12);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(90, 38);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnProfile
             // 
             this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnProfile.Font = new System.Drawing.Font("Palatino Linotype", 10.2F);
-            this.btnProfile.Location = new System.Drawing.Point(1341, 122);
+            this.btnProfile.Location = new System.Drawing.Point(1369, 13);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(96, 38);
             this.btnProfile.TabIndex = 2;
@@ -1060,7 +1079,7 @@
             this.lblHotelName.AutoSize = true;
             this.lblHotelName.Font = new System.Drawing.Font("Monotype Corsiva", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHotelName.ForeColor = System.Drawing.Color.White;
-            this.lblHotelName.Location = new System.Drawing.Point(4, 11);
+            this.lblHotelName.Location = new System.Drawing.Point(28, 14);
             this.lblHotelName.Name = "lblHotelName";
             this.lblHotelName.Size = new System.Drawing.Size(553, 97);
             this.lblHotelName.TabIndex = 0;
@@ -1076,8 +1095,11 @@
             this.Controls.Add(this.pnlAvailbility);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlNavigator.ResumeLayout(false);
             this.pnlAvailbility.ResumeLayout(false);
